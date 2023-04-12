@@ -1,9 +1,7 @@
-// TODO: Include packages needed for this application
 const inquirer=require('inquirer');
 const fs=require('fs');
-// TODO: Create an array of questions for user input
 const questions = ['Title of the project: ',"Description: ","Installation Instructions: ","License: ","Usage Information: ","Contribution Guidelines: ","Test Instructions: ","Link to github profile: ","Email Address"];
-
+// The badges for the licenses. 
 const licenses = {
 'Apache 2.0 License':{badge:'[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)', desc:'descplaceholder'},
 'Boost Software License 1.0':{badge:'[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)', desc:'descplaceholder'},
@@ -38,7 +36,7 @@ const licenses = {
 'The Do What the Fuck You Want to Public License':{badge:'[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)', desc:'The Do What The Fuck You Want To Public License (WTFPL) is a free software license.'},
 'The zlib/libpng License':{badge:'[![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)', desc:'descplaceholder'}};
 
-// TODO: Create a function to write README file
+//Creates the README
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data,function (err) {
         if (err) throw err;
@@ -46,7 +44,7 @@ function writeToFile(fileName, data) {
       });
 }
 
-// TODO: Create a function to initialize app
+//Uses inquirer to ask the questions and write them to the README through the writeToFile command
 function init() {
     inquirer.prompt([{
         name: 'Q0',
