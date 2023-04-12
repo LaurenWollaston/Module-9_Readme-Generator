@@ -10,7 +10,7 @@ This project generates a readme from the responses to questions using node and i
 [License](#license)
 [Questions](#questions)
 ## Installation 
-Install node and inquirer. From the terminal node index.js.
+Install node and inquirer. From the terminal navigate into the develop folder, npm i inquirer, node index.js.
 ## Usage Information 
 
 ## Contribution Guidelines 
